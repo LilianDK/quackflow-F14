@@ -4,7 +4,7 @@ import io
 import pdfplumber
 from fastapi import FastAPI, File, HTTPException, UploadFile
 
-app = FastAPI(title="PDF Extractor", version="1.0.0")
+app = FastAPI(title="quackflow-F14 Extractor", version="1.0.0")
 
 
 @app.get("/health")

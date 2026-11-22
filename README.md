@@ -1,4 +1,6 @@
-# PDF-Extraktion mit On-Prem-LLM
+# quackflow-F14
+
+PDF-Extraktion mit On-Prem-LLM.
 
 Weboberfläche zum Hochladen von PDFs. Der Text wird von einem FastAPI-Microservice extrahiert, an ein
 On-Prem-LLM (OpenAI-kompatible API, z. B. vLLM, Ollama, LM Studio) geschickt, das die in der Oberfläche

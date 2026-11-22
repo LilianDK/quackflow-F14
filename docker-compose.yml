@@ -1,3 +1,5 @@
+name: quackflow-f14  # Docker verlangt Kleinbuchstaben
+
 services:
   extractor:
     build: ./extractor

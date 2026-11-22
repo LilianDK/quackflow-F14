@@ -14,7 +14,7 @@ import config
 from excel import build_workbook
 from llm import extract_variables
 
-app = FastAPI(title="PDF-LLM-Extraktion", version="1.0.0")
+app = FastAPI(title="quackflow-F14", version="1.0.0")
 VARIABLES_FILE = Path(config.DATA_DIR) / "variables.json"
 
 DEFAULT_VARIABLES = [
