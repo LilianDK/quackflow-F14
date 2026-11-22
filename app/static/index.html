@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PDF-Extraktion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>PDF-Extraktion mit LLM</h1>
+  <div id="health" class="health">Status wird geprüft …</div>
+</header>
+<main>
+  <section class="card">
+    <div class="card-head">
+      <h2>1. Variablen definieren</h2>
+      <div>
+        <button id="add-var" class="secondary">+ Variable</button>
+        <button id="save-vars">Speichern</button>
+      </div>
+    </div>
+    <p class="hint">Diese Felder sucht das LLM in jedem PDF. Eine gute Beschreibung verbessert die Trefferqualität.</p>
+    <table class="vars">
+      <thead><tr><th>Name</th><th>Beschreibung (Anweisung ans LLM)</th><th>Typ</th><th></th></tr></thead>
+      <tbody id="var-rows"></tbody>
+    </table>
+    <div id="var-msg" class="msg"></div>
+  </section>
+
+  <section class="card">
+    <h2>2. PDFs hochladen</h2>
+    <label id="drop" class="drop">
+      <input id="file-input" type="file" accept="application/pdf,.pdf" multiple hidden>
+      <span>PDFs hierher ziehen oder <u>auswählen</u></span>
+    </label>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>3. Ergebnisse</h2>
+      <div>
+        <button id="clear" class="secondary">Leeren</button>
+        <button id="export" disabled>Excel exportieren</button>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="results">
+        <thead id="res-head"></thead>
+        <tbody id="res-rows"></tbody>
+      </table>
+    </div>
+    <p id="empty" class="hint">Noch keine Dokumente verarbeitet.</p>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

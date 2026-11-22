@@ -1,0 +1,28 @@
+:root { --bg:#f4f6fa; --card:#fff; --text:#1d2433; --muted:#6b7385; --line:#e2e6ee; --accent:#2f5597; --ok:#1e8449; --err:#c0392b; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--bg); color:var(--text); }
+header { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; padding:16px 24px; background:var(--accent); color:#fff; }
+header h1 { margin:0; font-size:1.3rem; }
+.health { font-size:.85rem; opacity:.9; }
+main { max-width:1200px; margin:0 auto; padding:24px 16px; display:grid; gap:20px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px 20px; }
+.card h2 { margin:0 0 8px; font-size:1.1rem; }
+.card-head { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+.hint { color:var(--muted); font-size:.9rem; margin:4px 0 12px; }
+button { background:var(--accent); color:#fff; border:0; border-radius:6px; padding:8px 14px; font-size:.9rem; cursor:pointer; }
+button.secondary { background:#e8edf6; color:var(--accent); }
+button:disabled { opacity:.45; cursor:not-allowed; }
+button.icon { background:none; color:var(--err); font-size:1.1rem; padding:4px 8px; }
+table { width:100%; border-collapse:collapse; font-size:.9rem; }
+th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { color:var(--muted); font-weight:600; }
+.vars input, .vars select, .vars textarea { width:100%; padding:6px 8px; border:1px solid var(--line); border-radius:5px; font:inherit; }
+.vars textarea { resize:vertical; min-height:34px; }
+.vars td:nth-child(1) { width:22%; } .vars td:nth-child(3) { width:13%; } .vars td:nth-child(4) { width:40px; }
+.drop { display:flex; align-items:center; justify-content:center; height:120px; border:2px dashed #b9c3d6; border-radius:10px; color:var(--muted); cursor:pointer; }
+.drop.over { border-color:var(--accent); background:#eef3fb; }
+.table-wrap { overflow-x:auto; }
+.results td { white-space:pre-wrap; }
+.status-ok { color:var(--ok); } .status-err { color:var(--err); } .status-run { color:var(--muted); }
+.null { color:#b0b6c3; font-style:italic; }
+.msg { font-size:.85rem; margin-top:8px; min-height:1em; }
