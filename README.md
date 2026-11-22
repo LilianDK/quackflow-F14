@@ -7,7 +7,7 @@ On-Prem-LLM (OpenAI-kompatible API, z. B. vLLM, Ollama, LM Studio) geschickt, da
 definierten Variablen herausliest. Die Ergebnisse erscheinen als Tabelle und lassen sich als Excel exportieren.
 
 ```
-Browser ──► app (FastAPI, :8000) ──► extractor (FastAPI, :8001)   PDF → Text
+Browser ──► app (FastAPI, :8080) ──► extractor (FastAPI, :8001)   PDF → Text
                      │
                      └────────────► On-Prem-LLM  /v1/chat/completions   Text → JSON mit Variablen
                      └── Excel-Export (openpyxl)
@@ -20,7 +20,7 @@ cp .env.example .env        # LLM_BASE_URL und LLM_MODEL anpassen
 docker compose up -d --build
 ```
 
-Dann http://localhost:8000 öffnen. Oben rechts zeigt die Seite, ob Extractor und LLM erreichbar sind.
+Dann http://localhost:8080 öffnen. Oben rechts zeigt die Seite, ob Extractor und LLM erreichbar sind.
 
 ## Bedienung
 
@@ -39,7 +39,7 @@ Dann http://localhost:8000 öffnen. Oben rechts zeigt die Seite, ob Extractor un
 | app       | `POST /api/export`     | Ergebnisse → `.xlsx`                   |
 | app       | `GET /api/health`      | Erreichbarkeit von Extractor und LLM   |
 
-Swagger-Doku: http://localhost:8000/docs
+Swagger-Doku: http://localhost:8080/docs
 
 ## Hinweise
 
